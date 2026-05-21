@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://unibe.com/soap/personas"
+           targetNamespace="http://unibe.com/soap/personas"
+           elementFormDefault="qualified">
+
+    <!-- REQUEST: lo que el cliente envía -->
+    <xs:element name="getPersonaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- RESPONSE: lo que el servidor responde -->
+    <xs:element name="getPersonaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="edad"   type="xs:int"/>
+                <xs:element name="correo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
